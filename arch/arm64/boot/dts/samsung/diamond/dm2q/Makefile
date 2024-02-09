@@ -3,15 +3,15 @@ KALAMA_BASE_DTB += ../../../vendor/qcom/kalama.dtb ../../../vendor/qcom/kalama-v
 KALAMA_APQ_BASE_DTB += ../../../vendor/qcom/kalamap.dtb ../../../vendor/qcom/kalamap-v2.dtb
 
 SAMSUNG_KALAMA_BOARDS += \
-		01_Samsung_DM2Q_PROJECT_board-id01.dtbo \
-		02_Samsung_DM2Q_PROJECT_board-id02.dtbo \
-		03_Samsung_DM2Q_PROJECT_board-id03.dtbo \
+		01_Samsung_DM2Q_PROJECT_board-id00.dtbo \
+		02_Samsung_DM2Q_PROJECT_board-id01.dtbo \
+		03_Samsung_DM2Q_PROJECT_board-id02.dtbo \
 		04_Samsung_DM2Q_PROJECT_board-id03.dtbo \
 		05_Samsung_DM2Q_PROJECT_board-id05.dtbo \
 		06_Samsung_DM2Q_PROJECT_board-id06.dtbo \
-		07_Samsung_DM2Q_PROJECT_board-id07.dtbo \
-		08_Samsung_DM2Q_PROJECT_board-id08.dtbo \
-		09_Samsung_DM2Q_PROJECT_board-id09.dtbo
+		07_Samsung_DM2Q_PROJECT_board-id08.dtbo \
+		08_Samsung_DM2Q_PROJECT_board-id09.dtbo \
+		09_Samsung_DM2Q_PROJECT_board-id13.dtbo
 
 kalama-overlays-dtb-y += $(SAMSUNG_KALAMA_BOARDS) $(KALAMA_BASE_DTB) $(KALAMA_APQ_BASE_DTB)
 dtb-y += $(SAMSUNG_KALAMA_BOARDS) $(KALAMA_BASE_DTB) $(KALAMA_APQ_BASE_DTB)
