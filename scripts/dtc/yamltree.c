@@ -9,6 +9,7 @@
 #include <yaml.h>
 #include "dtc.h"
 #include "srcpos.h"
+#define NO_YAML 1
 
 char *yaml_error_name[] = {
 	[YAML_NO_ERROR] = "no error",
