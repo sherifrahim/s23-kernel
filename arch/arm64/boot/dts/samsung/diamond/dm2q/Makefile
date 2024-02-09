@@ -82,6 +82,19 @@ kalama-overlays-dtb-y += dm2q_eur_openx_w00_r00.dtbo # ADDED BY LEGO AUTOMATICAL
 kalama-overlays-dtb-y += ../../../vendor/qcom/kalama.dtb ../../../vendor/qcom/kalama-v2.dtb ../../../vendor/qcom/kalamap.dtb ../../../vendor/qcom/kalamap-v2.dtb # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 # SPDX-License-Identifier: GPL-2.0
 
+<<<<<<< HEAD
+=======
+SAMSUNG_KALAMA_BOARDS += \
+		01_Samsung_DM2Q_PROJECT_board-id00.dtbo \
+		02_Samsung_DM2Q_PROJECT_board-id01.dtbo \
+		03_Samsung_DM2Q_PROJECT_board-id02.dtbo \
+		04_Samsung_DM2Q_PROJECT_board-id03.dtbo \
+		05_Samsung_DM2Q_PROJECT_board-id05.dtbo \
+		06_Samsung_DM2Q_PROJECT_board-id06.dtbo \
+		07_Samsung_DM2Q_PROJECT_board-id08.dtbo \
+		08_Samsung_DM2Q_PROJECT_board-id09.dtbo \
+		09_Samsung_DM2Q_PROJECT_board-id13.dtbo
+>>>>>>> 8580bf1da (Fixup DTS)
 
 # add-overlay defines the target with following naming convention:
 # <base>-<board>-dtbs = base.dtb board.dtbo
