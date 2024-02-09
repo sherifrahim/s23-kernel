@@ -1486,23 +1486,24 @@ static int do_read_header(struct fsg_common *common, struct fsg_buffhd *bh)
 
 static int do_read_toc(struct fsg_common *common, struct fsg_buffhd *bh)
 {
-	struct fsg_lun	*curlun = common->curlun;
-	int		msf = common->cmnd[1] & 0x02;
-	int		start_track = common->cmnd[6];
-	u8		*buf = (u8 *)bh->buf;
-	u8		format;
-	int		i, len;
+    struct fsg_lun *curlun = common->curlun;
+    int msf = common->cmnd[1] & 0x02;
+    int start_track = common->cmnd[6];
+    u8 *buf = (u8 *)bh->buf;
+    u8 format;
+    int i, len;
+
 #ifdef _SUPPORT_MAC_
-	int format = (common->cmnd[9] & 0xC0) >> 6;
+    format = (common->cmnd[9] & 0xC0) >> 6;
+#else
+    format = common->cmnd[2] & 0xf;
 #endif
 
-	format = common->cmnd[2] & 0xf;
-
-	if ((common->cmnd[1] & ~0x02) != 0 ||	/* Mask away MSF */
-			(start_track > 1 && format != 0x1)) {
-		curlun->sense_data = SS_INVALID_FIELD_IN_CDB;
-		return -EINVAL;
-	}
+    if ((common->cmnd[1] & ~0x02) != 0 ||   /* Mask away MSF */
+        (start_track > 1 && format != 0x1)) {
+        curlun->sense_data = SS_INVALID_FIELD_IN_CDB;
+        return -EINVAL;
+    }
 
 	/*
 	 * Check if CDB is old style SFF-8020i
