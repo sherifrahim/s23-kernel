@@ -8,8 +8,6 @@
 #include "dtc.h"
 #include "srcpos.h"
 
-#define NO_YAML 1
-
 /*
  * Command line options
  */
